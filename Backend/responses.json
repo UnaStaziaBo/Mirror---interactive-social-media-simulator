@@ -1,0 +1,44 @@
+{
+  "Empathy": {
+    "bot_reaction": "Thank you for your understanding. I’ll take note of that.",
+    "mood_impact": 10,
+    "community_impact": 20,
+    "explanation": "There was a sense of empathy in your words. It’s wonderful that you’ve decided to try to understand how the other person feels."
+  },
+  "Fact": {
+    "bot_reaction": "Ok, you're right about that",
+    "mood_impact": 5,
+    "community_impact": 15,
+    "explanation": "You used fact(s) in your answer. This shows how mature you are."
+  },
+  "Counter-speech": {
+    "bot_reaction": "Right, I got a bit carried away. Sorry.",
+    "mood_impact": 5,
+    "community_impact": 25,
+    "explanation": "Wow, you spotted the hate in the comment. And you managed to put a stop to it in such a mature way!"
+  },
+  "Aggression": {
+    "bot_reaction": "Listen, you idi0t! Shut your mouth.",
+    "mood_impact": -10,
+    "community_impact": -15,
+    "explanation": "Your comment came across as aggressive, which is why the person you were talking to replied in a rather rude manner."
+  },
+  "Insult": {
+    "bot_reaction": "I'll report you to the police!",
+    "mood_impact": -15,
+    "community_impact": -20,
+    "explanation": "The person you were talking to felt that you had offended them, which is why they wrote that."
+  },
+  "Sarcasm": {
+    "bot_reaction": "Go on, try joking with me again...",
+    "mood_impact": -5,
+    "community_impact": -10,
+    "explanation": "There was a hint of sarcasm in your comment. Even though it was meant as a joke, it made the other person feel uncomfortable."
+  },
+  "Ignoring": {
+    "bot_reaction": "I’m not a tissue for you to wipe yourself on and then throw away!",
+    "mood_impact": -15,
+    "community_impact": -20,
+    "explanation": "Your comment seemed to be ignoring the point. Ignoring things can be useful, but not always! There are times when you need to take notice and speak up."
+  }
+}
