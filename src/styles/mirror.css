@@ -1,0 +1,2695 @@
+/* =====================================================
+   MIRROR UI
+   Global Theme
+===================================================== */
+
+:root{
+
+  --bg:#f5f7fb;
+  --surface:#ffffff;
+
+  --text:#1f2937;
+  --muted:#6b7280;
+
+  --border:#e5e7eb;
+
+  --primary:#7c3aed;
+  --primary-light:#ede9fe;
+
+  --success:#22c55e;
+  --warning:#f59e0b;
+  --danger:#ef4444;
+
+  --shadow:
+    0 12px 30px rgba(0,0,0,.08);
+
+  --radius:24px;
+
+}
+
+/* =====================================================
+   Reset
+===================================================== */
+
+*{
+
+  box-sizing:border-box;
+
+}
+
+body{
+
+  margin:0;
+
+  background:var(--bg);
+
+  color:var(--text);
+
+  font-family:
+
+    Inter,
+
+    system-ui,
+
+    sans-serif;
+
+}
+
+/* =====================================================
+   Layout
+===================================================== */
+
+.story-screen{
+
+  width:100%;
+
+  max-width:900px;
+
+  margin:40px auto;
+
+  padding:20px;
+
+}
+
+.card{
+
+  background:var(--surface);
+
+  border:1px solid var(--border);
+
+  border-radius:var(--radius);
+
+  overflow:hidden;
+
+  box-shadow:var(--shadow);
+
+  transition:
+
+    transform .25s,
+
+    box-shadow .25s;
+
+}
+
+.card:hover{
+
+  transform:translateY(-2px);
+
+  box-shadow:
+
+    0 18px 40px rgba(0,0,0,.10);
+
+}
+
+
+/* =====================================================
+   Header
+===================================================== */
+
+.mirror-header{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:200;
+
+    height:64px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 32px;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(18px);
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.mirror-logo{
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:28px;
+
+    font-weight:800;
+
+    letter-spacing:-1px;
+
+    color:var(--primary);
+
+    transition:.2s;
+
+}
+
+.mirror-logo:hover{
+
+    transform:translateX(2px);
+
+    color:#5b21b6;
+
+}
+
+/* =====================================================
+   Buttons
+===================================================== */
+
+.button{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:8px;
+
+  border:none;
+
+  border-radius:999px;
+
+  cursor:pointer;
+
+  font:inherit;
+
+  font-weight:600;
+
+  padding:12px 22px;
+
+  transition:
+
+    transform .2s,
+
+    background .2s,
+
+    box-shadow .2s;
+
+}
+
+.button:hover{
+
+  transform:translateY(-2px);
+
+}
+
+.button:active{
+
+  transform:scale(.97);
+
+}
+
+.button-primary{
+
+  background:var(--primary);
+
+  color:white;
+
+}
+
+.button-primary:hover{
+
+  box-shadow:
+
+    0 10px 24px rgba(124,58,237,.30);
+
+}
+
+.button-secondary{
+
+  background:white;
+
+  color:var(--text);
+
+  border:1px solid var(--border);
+
+}
+
+.button-secondary:hover{
+
+  background:#fafafa;
+
+}
+
+/* =====================================================
+   Avatar
+===================================================== */
+
+.avatar{
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  flex-shrink:0;
+
+  border-radius:50%;
+
+  color:white;
+
+  font-weight:700;
+
+  box-shadow:
+
+    0 4px 12px rgba(0,0,0,.12);
+
+}
+
+.avatar.small{
+
+  width:36px;
+
+  height:36px;
+
+  font-size:13px;
+
+}
+
+.avatar.medium{
+
+  width:46px;
+
+  height:46px;
+
+  font-size:15px;
+
+}
+
+.avatar.large{
+
+  width:60px;
+
+  height:60px;
+
+  font-size:20px;
+
+}
+
+/* =====================================================
+   Health Bar
+===================================================== */
+
+.health-bar{
+
+  position:sticky;
+
+  top:0;
+
+  z-index:100;
+
+  backdrop-filter:blur(14px);
+
+  background:
+
+    rgba(255,255,255,.88);
+
+  border-bottom:
+
+    1px solid var(--border);
+
+}
+
+.health-inner{
+
+  max-width:900px;
+
+  margin:auto;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+
+  padding:16px 20px;
+
+}
+
+.health-icon{
+
+  font-size:24px;
+
+}
+
+.health-content{
+
+  flex:1;
+
+}
+
+.health-top{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  margin-bottom:8px;
+
+}
+
+.health-title{
+
+  font-size:13px;
+
+  color:var(--muted);
+
+}
+
+.health-state{
+
+  font-size:13px;
+
+  font-weight:700;
+
+}
+
+.health-track{
+
+  height:10px;
+
+  border-radius:999px;
+
+  overflow:hidden;
+
+  background:#eceff4;
+
+}
+
+.health-fill{
+
+  height:100%;
+
+  border-radius:999px;
+
+  transition:
+
+    width .5s ease,
+
+    background-color .5s ease;
+
+}
+
+/* =====================================================
+   Leo Post
+===================================================== */
+
+.post-card{
+
+  overflow:hidden;
+
+}
+
+.post-header{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+
+  padding:18px;
+
+}
+
+.post-user{
+
+  flex:1;
+
+}
+
+.post-name{
+
+  font-size:16px;
+
+  font-weight:700;
+
+  color:var(--text);
+
+}
+
+.post-handle{
+
+  margin-top:2px;
+
+  font-size:13px;
+
+  color:var(--muted);
+
+}
+
+.post-menu{
+
+  width:36px;
+
+  height:36px;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  border-radius:50%;
+
+  cursor:pointer;
+
+  transition:
+
+    background .2s,
+
+    transform .2s;
+
+}
+
+.post-menu:hover{
+
+  background:#f4f4f5;
+
+  transform:scale(1.05);
+
+}
+
+/* =====================================================
+   Artwork
+===================================================== */
+
+.post-image{
+
+    height:520px;
+
+    overflow:hidden;
+
+    background:#111;
+
+}
+
+.post-image-content{
+
+    width:100%;
+
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:transform .35s ease;
+
+}
+
+.post-image-content:hover{
+
+    transform:scale(1.02);
+
+}
+
+.post-footer{
+
+    padding-bottom:18px;
+
+}
+
+.post-menu{
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:24px;
+
+    color:var(--muted);
+
+}
+
+.post-menu:hover{
+
+    color:var(--text);
+
+}
+
+.post-action{
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.2s;
+
+}
+
+.post-action:hover{
+
+    transform:scale(1.1);
+
+}
+
+.post-image::before{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+
+    radial-gradient(
+
+      circle at 25% 18%,
+
+      rgba(255,255,255,.35),
+
+      transparent 35%
+
+    ),
+
+    radial-gradient(
+
+      circle at 82% 72%,
+
+      rgba(255,255,255,.18),
+
+      transparent 30%
+
+    );
+
+}
+
+.post-art{
+
+  position:absolute;
+
+  inset:0;
+
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  align-items:center;
+
+  color:white;
+
+}
+
+.post-art-icon{
+
+  font-size:96px;
+
+  margin-bottom:18px;
+
+  animation:float 5s ease-in-out infinite;
+
+}
+
+.post-art-title{
+
+  font-size:13px;
+
+  letter-spacing:4px;
+
+  text-transform:uppercase;
+
+  font-weight:700;
+
+}
+
+/* =====================================================
+   Actions
+===================================================== */
+
+.post-actions{
+
+  display:flex;
+
+  gap:18px;
+
+  padding:18px 18px 10px;
+
+}
+
+.post-action{
+
+  cursor:pointer;
+
+  transition:
+
+    transform .2s,
+
+    opacity .2s;
+
+}
+
+.post-action:hover{
+
+  transform:scale(1.15);
+
+  opacity:.75;
+
+}
+
+.post-caption{
+
+  padding:0 18px;
+
+  font-size:15px;
+
+  line-height:1.65;
+
+}
+
+.post-comments{
+
+  padding:14px 18px 20px;
+
+  font-size:13px;
+
+  color:var(--muted);
+
+}
+
+/* =====================================================
+   Decorative floating animation
+===================================================== */
+
+@keyframes float{
+
+  0%,
+  100%{
+
+    transform:translateY(0);
+
+  }
+
+  50%{
+
+    transform:translateY(-8px);
+
+  }
+
+}
+
+/* =====================================================
+   Comments
+===================================================== */
+
+.comments{
+
+  margin-top:24px;
+
+  overflow:hidden;
+
+}
+
+.comment{
+
+  display:flex;
+
+  gap:14px;
+
+  padding:18px;
+
+  transition:
+
+    background .2s,
+
+    transform .2s;
+
+}
+
+.comment + .comment{
+
+  border-top:1px solid var(--border);
+
+}
+
+.comment:hover{
+
+  background:#fafafa;
+
+}
+
+.comment-content{
+
+  flex:1;
+
+  min-width:0;
+
+}
+
+/* =====================================================
+   Bubble
+===================================================== */
+
+.comment-bubble{
+
+  padding:12px 14px;
+
+  background:#f3f4f6;
+
+  border-radius:18px;
+
+  border-top-left-radius:6px;
+
+}
+
+.comment-head{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+}
+
+.comment-author{
+
+  font-size:14px;
+
+  font-weight:700;
+
+  color:var(--text);
+
+}
+
+.comment-time{
+
+  font-size:12px;
+
+  color:var(--muted);
+
+}
+
+.comment-text{
+
+  margin-top:6px;
+
+  line-height:1.55;
+
+  word-break:break-word;
+
+  color:var(--text);
+
+}
+
+/* =====================================================
+   Actions
+===================================================== */
+
+.comment-actions{
+
+  display:flex;
+
+  align-items:center;
+
+  flex-wrap:wrap;
+
+  gap:12px;
+
+  margin-top:10px;
+
+}
+
+.comment-action{
+
+    background:none;
+
+    border:none;
+
+    padding:0;
+
+    color:var(--muted);
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.2s;
+
+}
+
+.comment-action:hover{
+
+    color:var(--primary);
+
+}
+
+.comment-button{
+
+  padding:0;
+
+  border:none;
+
+  background:none;
+
+  cursor:pointer;
+
+  font-size:13px;
+
+  font-weight:600;
+
+  color:var(--muted);
+
+  transition:
+
+    color .2s,
+
+    transform .2s;
+
+}
+
+.comment-button:hover{
+
+  color:var(--primary);
+
+  transform:translateY(-1px);
+
+}
+
+.comment-button:disabled{
+
+  opacity:.35;
+
+  cursor:not-allowed;
+
+}
+
+.comment-divider{
+
+  color:#d1d5db;
+
+}
+
+.comment-likes{
+
+  margin-left:auto;
+
+  font-size:12px;
+
+  color:var(--muted);
+
+}
+
+.comment-status{
+
+    margin-left:8px;
+
+    padding:4px 10px;
+
+    border-radius:999px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+}
+
+/* =====================================================
+   Like
+===================================================== */
+
+.like-active{
+
+  color:#e11d48;
+
+}
+
+.comment-button:active{
+
+  transform:scale(.94);
+
+}
+
+/* =====================================================
+   Classification Badge
+===================================================== */
+
+.classification-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:14px;
+
+}
+
+.classification-card{
+
+    padding:16px;
+
+    text-align:left;
+
+    background:white;
+
+    border:2px solid var(--border);
+
+    border-radius:18px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+}
+
+.classification-card:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
+}
+
+.classification-title{
+
+    font-size:15px;
+
+    font-weight:700;
+
+    margin-bottom:8px;
+
+}
+
+.classification-description{
+
+    font-size:13px;
+
+    color:var(--muted);
+
+    line-height:1.5;
+
+}
+
+.badge{
+
+  display:inline-flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  padding:4px 10px;
+
+  border-radius:999px;
+
+  font-size:11px;
+
+  font-weight:700;
+
+  letter-spacing:.2px;
+
+}
+
+.badge.success{
+
+  background:#dcfce7;
+
+  color:#166534;
+
+}
+
+.badge.error{
+
+  background:#fee2e2;
+
+  color:#991b1b;
+
+}
+
+/* =====================================================
+   Empty
+===================================================== */
+
+.comments-empty{
+
+  padding:48px;
+
+  text-align:center;
+
+  color:var(--muted);
+
+}
+
+/* =====================================================
+   Mobile
+===================================================== */
+
+@media (max-width:768px){
+
+  .comment{
+
+    gap:10px;
+
+    padding:14px;
+
+  }
+
+  .comment-actions{
+
+    gap:8px;
+
+  }
+
+  .comment-likes{
+
+    width:100%;
+
+    margin-left:0;
+
+  }
+
+}
+
+/* =====================================================
+   Modals
+===================================================== */
+
+.modal-overlay{
+
+  position:fixed;
+
+  inset:0;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  padding:20px;
+
+  background:rgba(0,0,0,.45);
+
+  backdrop-filter:blur(10px);
+
+  z-index:1000;
+
+}
+
+.modal{
+
+  width:100%;
+
+  max-width:520px;
+
+  overflow:hidden;
+
+  background:white;
+
+  border-radius:28px;
+
+  box-shadow:
+
+    0 24px 60px rgba(0,0,0,.18);
+
+  animation:modalAppear .25s ease;
+
+}
+
+/* =====================================================
+   Header
+===================================================== */
+
+.modal-header{
+
+  padding:22px;
+
+  border-bottom:1px solid var(--border);
+
+}
+
+.modal-title{
+
+  font-size:13px;
+
+  text-transform:uppercase;
+
+  letter-spacing:1px;
+
+  color:var(--muted);
+
+  font-weight:700;
+
+}
+
+.modal-subtitle{
+
+  margin-top:8px;
+
+  line-height:1.5;
+
+  font-size:15px;
+
+}
+
+.modal-user{
+
+  font-weight:700;
+
+}
+
+/* =====================================================
+   Gradient header
+===================================================== */
+
+.modal-header-gradient{
+
+  padding:22px;
+
+  color:white;
+
+  background:
+
+    linear-gradient(
+
+      135deg,
+
+      var(--primary),
+
+      #9d5cff
+
+    );
+
+}
+
+.modal-header-gradient h2{
+
+  margin-top:6px;
+
+  font-size:22px;
+
+}
+
+/* =====================================================
+   Body
+===================================================== */
+
+.modal-body{
+
+  padding:20px;
+
+}
+
+.modal-list{
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:12px;
+
+}
+
+/* =====================================================
+   Option button
+===================================================== */
+
+.modal-option{
+
+  width:100%;
+
+  padding:16px;
+
+  border:1px solid var(--border);
+
+  border-radius:18px;
+
+  background:#fafafa;
+
+  text-align:left;
+
+  cursor:pointer;
+
+  transition:
+
+    transform .2s,
+
+    border-color .2s,
+
+    box-shadow .2s;
+
+}
+
+.modal-option:hover{
+
+  transform:translateY(-2px);
+
+  border-color:var(--primary);
+
+  box-shadow:
+
+    0 12px 26px rgba(0,0,0,.08);
+
+}
+
+.modal-option-title{
+
+  font-size:15px;
+
+  line-height:1.5;
+
+}
+
+.modal-option-description{
+
+  margin-top:6px;
+
+  font-size:12px;
+
+  color:var(--muted);
+
+}
+
+/* =====================================================
+   Category buttons
+===================================================== */
+
+.modal-grid{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:12px;
+
+}
+
+.category-card{
+
+  padding:16px;
+
+  border-radius:18px;
+
+  border:2px solid var(--border);
+
+  cursor:pointer;
+
+  transition:
+
+    transform .2s,
+
+    box-shadow .2s,
+
+    border-color .2s;
+
+}
+
+.category-card:hover{
+
+  transform:translateY(-2px);
+
+  box-shadow:
+
+    0 12px 24px rgba(0,0,0,.08);
+
+}
+
+.category-title{
+
+  font-size:15px;
+
+  font-weight:700;
+
+}
+
+.category-description{
+
+  margin-top:6px;
+
+  font-size:12px;
+
+  color:var(--muted);
+
+}
+
+/* =====================================================
+   Typing state
+===================================================== */
+
+.modal-typing{
+
+  padding:26px;
+
+}
+
+.modal-message{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:10px;
+
+  padding:14px 16px;
+
+  background:#f4f4f5;
+
+  border-radius:18px;
+
+}
+
+.modal-message strong{
+
+  color:var(--primary);
+
+}
+
+.modal-status{
+
+  margin-top:18px;
+
+  text-align:center;
+
+  font-size:13px;
+
+  color:var(--muted);
+
+}
+
+/* =====================================================
+   Footer
+===================================================== */
+
+.modal-footer{
+
+  padding:0 20px 20px;
+
+}
+
+.modal-cancel{
+
+  width:100%;
+
+}
+
+/* =====================================================
+   Responsive
+===================================================== */
+
+@media (max-width:768px){
+
+  .modal{
+
+    max-width:none;
+
+    border-radius:28px 28px 0 0;
+
+    align-self:flex-end;
+
+    animation:slideUp .25s ease;
+
+  }
+
+  .modal-grid{
+
+    grid-template-columns:1fr;
+
+  }
+
+}
+
+/* =====================================================
+   Leo Chat
+===================================================== */
+
+.leo-fab{
+
+  position:fixed;
+
+  right:24px;
+
+  bottom:24px;
+
+  width:64px;
+
+  height:64px;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  border:none;
+
+  border-radius:50%;
+
+  cursor:pointer;
+
+  background:var(--primary);
+
+  color:white;
+
+  font-size:28px;
+
+  box-shadow:
+    0 18px 36px rgba(124,58,237,.35);
+
+  transition:
+    transform .2s,
+    box-shadow .2s;
+
+  z-index:900;
+
+}
+
+.leo-fab:hover{
+
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 22px 40px rgba(124,58,237,.45);
+
+}
+
+.leo-fab-badge{
+
+  position:absolute;
+
+  top:-6px;
+
+  right:-6px;
+
+  min-width:22px;
+
+  height:22px;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  padding:0 6px;
+
+  border-radius:999px;
+
+  background:#ef4444;
+
+  color:white;
+
+  font-size:11px;
+
+  font-weight:700;
+
+}
+
+/* =====================================================
+   Overlay
+===================================================== */
+
+.leo-chat-overlay{
+
+  position:fixed;
+
+  inset:0;
+
+  display:flex;
+
+  justify-content:flex-end;
+
+  align-items:flex-end;
+
+  padding:24px;
+
+  background:rgba(0,0,0,.35);
+
+  backdrop-filter:blur(10px);
+
+  z-index:950;
+
+}
+
+/* =====================================================
+   Window
+===================================================== */
+
+.leo-chat-window{
+
+  width:360px;
+
+  height:620px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  overflow:hidden;
+
+  background:white;
+
+  border-radius:28px;
+
+  box-shadow:
+    0 26px 60px rgba(0,0,0,.20);
+
+  animation:chatAppear .25s ease;
+
+}
+
+/* =====================================================
+   Header
+===================================================== */
+
+.leo-chat-header{
+
+  display:flex;
+
+  align-items:center;
+
+  gap:14px;
+
+  padding:18px;
+
+  border-bottom:1px solid var(--border);
+
+}
+
+.leo-chat-user{
+
+  flex:1;
+
+}
+
+.leo-chat-name{
+
+  font-size:15px;
+
+  font-weight:700;
+
+}
+
+.leo-chat-status{
+
+  margin-top:2px;
+
+  font-size:12px;
+
+  color:var(--muted);
+
+}
+
+/* =====================================================
+   Body
+===================================================== */
+
+.leo-chat-body{
+
+  flex:1;
+
+  overflow-y:auto;
+
+  padding:18px;
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:12px;
+
+  background:#fafafa;
+
+}
+
+.leo-chat-body::-webkit-scrollbar{
+
+  width:6px;
+
+}
+
+.leo-chat-body::-webkit-scrollbar-thumb{
+
+  border-radius:999px;
+
+  background:#d1d5db;
+
+}
+
+/* =====================================================
+   Messages
+===================================================== */
+
+.leo-message{
+
+  max-width:85%;
+
+  align-self:flex-start;
+
+  padding:12px 14px;
+
+  background:white;
+
+  border-radius:18px;
+
+  border-bottom-left-radius:6px;
+
+  line-height:1.5;
+
+  box-shadow:
+
+    0 4px 10px rgba(0,0,0,.05);
+
+  animation:messageAppear .25s ease;
+
+}
+
+.leo-empty{
+
+  margin:auto;
+
+  text-align:center;
+
+  color:var(--muted);
+
+  line-height:1.6;
+
+}
+
+.leo-typing{
+
+  max-width:85%;
+
+  padding:12px 14px;
+
+  background:white;
+
+  border-radius:18px;
+
+  border-bottom-left-radius:6px;
+
+  box-shadow:
+
+    0 4px 10px rgba(0,0,0,.05);
+
+}
+
+/* =====================================================
+   Mobile
+===================================================== */
+
+@media (max-width:768px){
+
+  .leo-chat-overlay{
+
+    padding:0;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+  }
+
+  .leo-chat-window{
+
+    width:100%;
+
+    height:78vh;
+
+    border-radius:26px 26px 0 0;
+
+  }
+
+  .leo-chat-header{
+
+    padding:16px;
+
+  }
+
+  .leo-chat-body{
+
+    padding:16px;
+
+  }
+
+  .leo-fab{
+
+    right:18px;
+
+    bottom:18px;
+
+    width:60px;
+
+    height:60px;
+
+  }
+
+}
+
+/* =====================================================
+   AI Feedback
+===================================================== */
+.ai-panel{
+
+    position:fixed;
+
+    left:24px;
+
+    bottom:24px;
+
+    width:360px;
+
+    z-index:880;
+
+    animation:chatAppear .25s ease;
+
+}
+
+@media (max-width:768px){
+
+    .ai-panel{
+
+        left:16px;
+
+        right:16px;
+
+        bottom:90px;
+
+        width:auto;
+
+    }
+
+}
+
+
+.feedback-card{
+
+  width:100%;
+
+  max-width:520px;
+
+  overflow:hidden;
+
+  background:white;
+
+  border-radius:28px;
+
+  box-shadow:
+    0 24px 60px rgba(0,0,0,.18);
+
+  animation:modalAppear .25s ease;
+
+}
+
+.feedback-header{
+
+  padding:22px;
+
+  color:white;
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      #9d5cff
+    );
+
+}
+
+.feedback-title{
+
+  font-size:13px;
+
+  text-transform:uppercase;
+
+  letter-spacing:1px;
+
+  opacity:.9;
+
+}
+
+.feedback-subtitle{
+
+  margin-top:6px;
+
+  font-size:22px;
+
+  font-weight:700;
+
+}
+
+.feedback-body{
+
+  padding:22px;
+
+}
+
+.feedback-tags{
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:10px;
+
+  margin-bottom:20px;
+
+}
+
+.feedback-section{
+
+  margin-top:18px;
+
+}
+
+.feedback-box{
+
+  padding:16px;
+
+  border-radius:18px;
+
+  background:#f4f4f5;
+
+}
+
+.feedback-impact{
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-top:18px;
+
+  padding:16px;
+
+  border-radius:18px;
+
+  font-weight:700;
+
+}
+
+.feedback-impact.positive{
+
+  background:#dcfce7;
+
+  color:#166534;
+
+}
+
+.feedback-impact.negative{
+
+  background:#fee2e2;
+
+  color:#991b1b;
+
+}
+
+.feedback-leo{
+
+  display:flex;
+
+  gap:14px;
+
+  margin-top:18px;
+
+  padding:16px;
+
+  border:1px solid var(--border);
+
+  border-radius:18px;
+
+}
+
+.feedback-leo-message{
+
+  flex:1;
+
+  line-height:1.55;
+
+}
+
+.feedback-footer{
+
+  margin-top:24px;
+
+}
+
+/* =====================================================
+   Chips
+===================================================== */
+
+.chip{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:6px;
+
+  padding:6px 12px;
+
+  border-radius:999px;
+
+  font-size:12px;
+
+  font-weight:700;
+
+}
+
+/* =====================================================
+   Helpers
+===================================================== */
+
+.glass{
+
+  backdrop-filter:blur(14px);
+
+  background:rgba(255,255,255,.75);
+
+}
+
+.gradient{
+
+  background:
+
+    linear-gradient(
+      135deg,
+      var(--primary),
+      #9d5cff
+    );
+
+  color:white;
+
+}
+
+.center{
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+}
+
+.hidden{
+
+  display:none;
+
+}
+
+/* =====================================================
+   Typing Dots
+===================================================== */
+
+.typing{
+
+  display:flex;
+
+  gap:5px;
+
+}
+
+.typing-dot{
+
+  width:7px;
+
+  height:7px;
+
+  border-radius:50%;
+
+  background:currentColor;
+
+  animation:typing 1.2s infinite;
+
+}
+
+.typing-dot:nth-child(2){
+
+  animation-delay:.15s;
+
+}
+
+.typing-dot:nth-child(3){
+
+  animation-delay:.3s;
+
+}
+
+/* =====================================================
+   Animations
+===================================================== */
+
+@keyframes modalAppear{
+
+  from{
+
+    opacity:0;
+
+    transform:
+      translateY(20px)
+      scale(.96);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:
+      translateY(0)
+      scale(1);
+
+  }
+
+}
+
+@keyframes chatAppear{
+
+  from{
+
+    opacity:0;
+
+    transform:
+      translateY(24px);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+@keyframes messageAppear{
+
+  from{
+
+    opacity:0;
+
+    transform:
+      translateY(10px);
+
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:
+      translateY(0);
+
+  }
+
+}
+
+@keyframes typing{
+
+  0%,
+  80%,
+  100%{
+
+    transform:scale(.65);
+
+    opacity:.45;
+
+  }
+
+  40%{
+
+    transform:scale(1);
+
+    opacity:1;
+
+  }
+
+}
+
+@keyframes pulse{
+
+  0%{
+
+    transform:scale(1);
+
+  }
+
+  50%{
+
+    transform:scale(1.08);
+
+  }
+
+  100%{
+
+    transform:scale(1);
+
+  }
+
+}
+
+@keyframes slideUp{
+
+  from{
+
+    transform:translateY(100%);
+
+  }
+
+  to{
+
+    transform:translateY(0);
+
+  }
+
+}
+
+/* =====================================================
+   Global Responsive
+===================================================== */
+
+@media (max-width:900px){
+
+  .story-screen{
+
+    padding:16px;
+
+  }
+
+}
+
+@media (max-width:768px){
+
+  .health-inner{
+
+    padding:14px 16px;
+
+  }
+
+  .post-header{
+
+    padding:14px;
+
+  }
+
+  .post-actions{
+
+    padding:14px 14px 8px;
+
+  }
+
+  .post-caption{
+
+    padding:0 14px;
+
+  }
+
+  .post-comments{
+
+    padding:12px 14px 16px;
+
+  }
+
+  .feedback-body{
+
+    padding:18px;
+
+  }
+
+  .feedback-leo{
+
+    flex-direction:column;
+
+  }
+
+}
+
+@media (max-width:520px){
+
+  .story-screen{
+
+    padding:10px;
+
+  }
+
+  .card{
+
+    border-radius:20px;
+
+  }
+
+  .modal{
+
+    border-radius:24px 24px 0 0;
+
+  }
+
+}
+
+/* =====================================================
+   Ending Screen
+===================================================== */
+
+.ending-screen{
+
+    max-width:900px;
+
+    margin:60px auto;
+
+    padding:20px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+.ending-hero{
+
+    text-align:center;
+
+    padding:50px 30px;
+
+    border-radius:32px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #7c3aed,
+            #9f5cff
+        );
+
+    color:white;
+
+    box-shadow:
+        0 20px 50px rgba(124,58,237,.30);
+
+}
+
+.ending-emoji{
+
+    font-size:60px;
+
+    margin-bottom:18px;
+
+    animation:pulse 2.5s infinite;
+
+}
+
+.ending-hero h1{
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+}
+
+.ending-hero p{
+
+    opacity:.9;
+
+    font-size:17px;
+
+}
+
+.ending-card{
+
+    background:white;
+
+    border-radius:26px;
+
+    padding:24px;
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    animation:modalAppear .35s ease;
+
+}
+
+.ending-section-title{
+
+    font-size:13px;
+
+    text-transform:uppercase;
+
+    letter-spacing:1px;
+
+    color:var(--muted);
+
+    margin-bottom:18px;
+
+    font-weight:700;
+
+}
+
+/* =====================================================
+   Health
+===================================================== */
+
+.ending-health{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.ending-health-track{
+
+    flex:1;
+
+    height:12px;
+
+    overflow:hidden;
+
+    border-radius:999px;
+
+    background:#eceff4;
+
+}
+
+.ending-health-fill{
+
+    height:100%;
+
+    background:var(--success);
+
+    border-radius:999px;
+
+    transition:width .8s ease;
+
+}
+
+.ending-health-value{
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.ending-health-label{
+
+    margin-top:12px;
+
+    color:var(--muted);
+
+}
+
+/* =====================================================
+   Leo
+===================================================== */
+
+.ending-leo{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:flex-start;
+
+}
+
+.ending-avatar{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:700;
+
+}
+
+.ending-message{
+
+    flex:1;
+
+    line-height:1.8;
+
+    white-space:pre-line;
+
+}
+
+/* =====================================================
+   Outcome
+===================================================== */
+
+.ending-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.ending-list div{
+
+    padding:14px 18px;
+
+    border-radius:16px;
+
+    background:#f8fafc;
+
+    transition:.2s;
+
+}
+
+.ending-list div:hover{
+
+    transform:translateX(4px);
+
+}
+
+/* =====================================================
+   Communication
+===================================================== */
+
+.ending-styles{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:14px;
+
+}
+
+.ending-style{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:14px 18px;
+
+    border-radius:18px;
+
+    background:#fafafa;
+
+}
+
+.ending-style-name{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:600;
+
+}
+
+.ending-style-value{
+
+    font-size:22px;
+
+    font-weight:700;
+
+}
+
+/* =====================================================
+   Reflection
+===================================================== */
+
+.ending-reflection{
+
+    line-height:1.8;
+
+    margin-bottom:22px;
+
+}
+
+.ending-quote{
+
+    padding:22px;
+
+    border-left:5px solid var(--primary);
+
+    background:#f8fafc;
+
+    border-radius:16px;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    font-style:italic;
+
+}
+
+/* =====================================================
+   Actions
+===================================================== */
+
+.ending-actions{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+}
+
+.ending-footer{
+
+    text-align:center;
+
+    color:var(--muted);
+
+    padding-bottom:60px;
+
+}
+
+.ending-footer p{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    margin-bottom:6px;
+
+}
+
+/* =====================================================
+   Ending Mobile
+===================================================== */
+
+@media (max-width:768px){
+
+    .ending-screen{
+
+        padding:16px;
+
+    }
+
+    .ending-hero{
+
+        padding:40px 24px;
+
+    }
+
+    .ending-hero h1{
+
+        font-size:30px;
+
+    }
+
+    .ending-actions{
+
+        flex-direction:column;
+
+    }
+
+    .ending-health{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .ending-health-track{
+
+        width:100%;
+
+    }
+
+    .ending-leo{
+
+        flex-direction:column;
+
+    }
+
+}
+
+.header-health{
+
+    margin-left:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:#f8fafc;
+
+    border:1px solid var(--border);
+
+}
+
+.header-health-icon{
+
+    font-size:18px;
+
+}
+
+.header-health-value{
+
+    font-weight:700;
+
+    font-size:14px;
+
+}
