@@ -23,18 +23,14 @@ export function CommentItem({
 
   return (
     <div className="comment">
-
       <Avatar
         color={comment.avatarColor}
         name={comment.author}
       />
 
       <div className="comment-content">
-
         <div className="comment-bubble">
-
           <div className="comment-head">
-
             <span className="comment-author">
               {comment.author}
             </span>
@@ -42,17 +38,14 @@ export function CommentItem({
             <span className="comment-time">
               {comment.timeAgo}
             </span>
-
           </div>
 
           <p className="comment-text">
             {comment.text}
           </p>
-
         </div>
 
         <div className="comment-actions">
-
           <button
             className={`comment-action ${
               liked ? "like-active" : ""
@@ -63,45 +56,38 @@ export function CommentItem({
           </button>
 
           <button
-            className="comment-action"
+            className={`comment-action ${
+              handled?.replied ? "success" : ""
+            }`}
             disabled={handled?.replied}
             onClick={() => onReply(comment)}
           >
-            Reply
+            {handled?.replied ? "✓ Replied" : "Reply"}
           </button>
 
           <button
-            className="comment-action"
+            className={`comment-action ${
+              handled?.classified
+                ? handled.correctClass
+                  ? "success"
+                  : "error"
+                : ""
+            }`}
             disabled={handled?.classified}
             onClick={() => onClassify(comment)}
           >
-            Classify
+            {!handled?.classified
+              ? "Classify"
+              : handled.correctClass
+                ? "✓ Correct"
+                : "✗ Misclassified"}
           </button>
 
           <span className="comment-likes">
             {comment.likes + (liked ? 1 : 0)} likes
           </span>
-
-          {handled?.classified && (
-
-            <span
-              className={`comment-status ${
-                handled.correctClass
-                  ? "success"
-                  : "error"
-              }`}
-            >
-              {handled.correctClass
-                ? "✓ Classified"
-                : "✗ Misclassified"}
-            </span>
-
-          )}
-
         </div>
-
       </div>
-
     </div>
   );
 }
